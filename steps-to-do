@@ -13,3 +13,7 @@
 #### bonus
 
 - Change where to store your tfstate file by declaring a backend block https://developer.hashicorp.com/terraform/language/settings/backends/s3
+
+
+### use terraform init when there's changes for:
+### -> provider (or location), backend, and module
