@@ -1,0 +1,12 @@
+Install terraform and aws-cli, set your aws credentials (if you havent already done so)
+Create a terraform project with an aws provider
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+Initialize the skeleton of the project using terraform init
+Declare an Amazon SNS topic by referencing https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic
+Plan the changes using terraform plan
+Create the topic sing terraform apply
+Observe changes to tfstate file
+Cleanup using terraform destroy
+Observe changes to tfstate file
+bonus
+Change where to store your tfstate file by declaring a backend block https://developer.hashicorp.com/terraform/language/settings/backends/s3
