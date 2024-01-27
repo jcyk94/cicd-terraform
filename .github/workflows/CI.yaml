@@ -34,5 +34,5 @@ jobs:
       run: terraform init
 
     #terraform apply
-    - name: Terraform Validate
-      run: terraform validate -no-color
+    - name: Terraform Plan
+      run: terraform plan
