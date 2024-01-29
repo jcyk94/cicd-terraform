@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      #git clone / git checkout
+      #git clone/ git checkout
       - name: Checkout repository
         uses: actions/checkout@v2
 
