@@ -1,4 +1,4 @@
-name: Terraform CI
+name: Terraform CD
 
 #when git push successfully, this will run
 on:
@@ -32,14 +32,6 @@ jobs:
       - name: Initialize Terraform
         run: terraform init
 
-      #terraform format
-      - name: Terraform Lint
-        run: terraform fmt -recursive
-
-      #terraform validate
-      - name: Terraform Validate
-        run: terraform validate
-
       #terraform apply
-      - name: Terraform Plan
-        run: terraform plan
+      - name: Terraform Apply
+        run: terraform apply --auto-approve
