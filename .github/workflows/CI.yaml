@@ -13,7 +13,7 @@ jobs:
 
     steps:
       #git clone/ git checkout
-      - name: Checkout repository
+      - name: Checkout repositories
         uses: actions/checkout@v2
 
       #aws configure
