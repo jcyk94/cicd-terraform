@@ -2,18 +2,9 @@ name: Terraform CD
 
 #when git push successfully, this will run
 on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: 'playing with environment'
-        required: true
-        default: "development"
-        type: choice
-        options:
-        ##these options here can be used to load different blocks of yaml for different steps
-        - development
-        - staging
-        - prod
+ push:
+   branches:
+     - main
 
 # declare the running agent
 jobs:
