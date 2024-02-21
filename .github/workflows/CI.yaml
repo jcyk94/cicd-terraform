@@ -1,8 +1,13 @@
 name: Terraform CI
 
-#when git push successfully, this will run
+# #when git push successfully, this will run
+# on:
+#   push:
+#     branches:
+#       - main
+
 on:
-  push:
+  pull_request:
     branches:
       - main
 

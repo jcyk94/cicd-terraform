@@ -1,16 +1,10 @@
-name: Terraform CD
-
-# #when git push successfully, this will run
-# on:
-#   push:
-#     branches:
-#       - main
+name: Terraform Destroy
 
 on:
   workflow_dispatch:
     inputs:
       environment:
-        description: "Environment to run tf apply on"
+        description: "Environment to run tf Destroy on"
         required: true
         default: "dev"
         type: choice
@@ -22,7 +16,7 @@ on:
 
 # declare the running agent
 jobs:
-  Terraform-CD:
+  Terraform-Destroy:
     runs-on: ubuntu-latest
 
     steps:
@@ -45,16 +39,6 @@ jobs:
       #terraform init
       - name: Initialize Terraform
         run: terraform init
-
-      #terraform apply
-      - name: Terraform Apply
-        run: terraform apply --auto-approve -var-file="environments/${{ github.event.inputs.environment }}.tfvars"
-      # alternate manual way to reassign var
-      #   run: terraform apply --auto-approve -var 'abc="environments/${{ github.event.inputs.environment }}.tfvars"'
-
-      # Wait 10 minutes
-      - name: wait for 5min
-        run: sleep 300
 
       #terraform Destroy
       - name: Terraform Destroy
